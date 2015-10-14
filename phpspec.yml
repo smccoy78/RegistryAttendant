@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: RegistryAttendant
+        psr4_prefix: RegistryAttendant
+        src_path: app
