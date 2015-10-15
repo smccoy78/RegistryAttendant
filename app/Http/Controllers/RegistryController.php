@@ -11,11 +11,6 @@ use Illuminate\Http\Request;
 
 class RegistryController extends Controller {
 
-    public function __construct()
-    {
-        $this->middleware('auth', ['only' => 'create, edit, update']);
-    }
-
     public function index()
     {
         $registry = Registry::latest('created_at')->TodayEvents()->get();
