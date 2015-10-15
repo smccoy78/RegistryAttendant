@@ -37,10 +37,10 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Registry<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             @if (Auth::guest())
-                                <li><a href="{{ url('/registry/create') }}">Register</a></li>
+                                <li><a href="{{ action('RegistryController@create') }}">Register</a></li>
                             @else
-                                <li><a href="{{ url('/registry') }}">View</a></li>
-                                <li><a href="{{ url('/registry/create') }}">Register</a></li>
+                                <li><a href="{{ action('RegistryController@index') }}">View</a></li>
+                                <li><a href="{{ action('RegistryController@create') }}">Register</a></li>
                             @endif
                         </ul>
                     </li>
@@ -50,8 +50,8 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Events<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{ url('/events') }}">View</a></li>
-                            <li><a href="{{ url('/events/create') }}">Create</a></li>
+                            <li><a href="{{ action('EventsController@index') }}">View</a></li>
+                            <li><a href="{{ action('EventsController@create') }}">Create</a></li>
                         </ul>
                     </li>
 				</ul>
